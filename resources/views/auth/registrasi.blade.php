@@ -41,27 +41,27 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Buat Akun!</h1>
                                     </div>
-                                    <form class="user" method="POST" action="#" enctype="multipart/form-data">
+                                    <form class="user" method="POST" action="{{ route('registrasi.submit') }}" enctype="multipart/form-data">
                                         @csrf
                                         <div class="form-group">
-                                            <input class="form-control form-control-user" name="name" id="name"
+                                            <input class="form-control form-control-user" name="name"
                                                 placeholder="Nama....">
                                         </div>
                                         <div class="form-group">
-                                            <input type="email" class="form-control form-control-user" name="email" id="email"
+                                            <input type="email" class="form-control form-control-user" name="email"
                                                 placeholder="Email Address....">
                                         </div>
                                         <div class="form-group row">
                                             <div class="col-sm-6 mb-3 mb-sm-0">
                                                 <input type="password" class="form-control form-control-user"
-                                                    name="password" id="password" placeholder="Password...">
+                                                    name="password" placeholder="Password...">
                                             </div>
                                             <div class="col-sm-6">
                                                 <input type="password" class="form-control form-control-user" name="password"
                                                     id="password" placeholder="Ulangi Password!!">
                                             </div>
                                         </div>
-                                        <button type="submit" href="{{ url('/login') }}" class="btn btn-primary btn-user btn-block">
+                                        <button class="btn btn-primary btn-user btn-block">
                                             Register Akun
                                         </button>
                                     </form>

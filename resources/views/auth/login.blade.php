@@ -41,19 +41,30 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Login Page!</h1>
                                     </div>
+                                    <!-- @if (session('gagal'))
+                                    <div class="alert alert-danger">
+                                        {{ session('gagal') }}
+                                    </div>
+                                    @endif -->
                                     <div class="col-lg-12">
-                                        <form class="user" method="POST" action="{{ route('login') }}">
+                                        <form class="user" method="POST" action="{{ route('login.submit') }}">
                                             @csrf
+                                            <!-- <div class="form-group">
+                                                <input type="name"
+                                                    name="name" class="form-control form-control-user"
+                                                    placeholder="Masukan Nama...">
+                                            </div> -->
                                             <div class="form-group">
-                                                <input type="email" class="form-control form-control-user"
-                                                    id="exampleInputEmail" aria-describedby="emailHelp"
+                                                <input type="email" name="email" class="form-control form-control-user"
+                                                    aria-describedby="emailHelp"
                                                     placeholder="Masukan Email ...">
                                             </div>
                                             <div class="form-group">
-                                                <input type="password" class="form-control form-control-user"
+                                                <input type="password" name="password"
+                                                    class="form-control form-control-user"
                                                     id="exampleInputPassword" placeholder="Masukan Password...">
                                             </div>
-                                            <button type="submit" class="btn btn-primary btn-user btn-block">
+                                            <button class="btn btn-primary btn-user btn-block">
                                                 Login
                                             </button>
                                         </form>
@@ -63,7 +74,7 @@
                                         <a class="small" href="forgot-password.html">Lupa Password?</a>
                                     </div>
                                     <div class="text-center">
-                                        <a class="small" href="{{ url('/auth/registrasi') }}">Buat Akun!</a>
+                                        <a class="small" href="{{ route('registrasi.tampil') }}">Buat Akun!</a>
                                     </div>
                                 </div>
                             </div>
