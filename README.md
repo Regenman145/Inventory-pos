@@ -1,12 +1,3 @@
-<p align="center">Anggota Kelompok</p>
-<p align="center">1. Riyanto | STI202202753</p>
-<p align="center">2. Ikhwan Aji Ginanjar | STI202203295</p>
-<p align="center">3. Azwi Ananta Aditiya | STI202202970</p>
-<p align="center">4. Riski Junianto | STI202202976</p>
-<p align="center">5. Nurdani Dwi Romadon | STI202203300</p>
-<p align="center">6. Dafa Ahmad Sajangah | STI202202731</p>
-
-
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
@@ -73,3 +64,11 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+<p align="center">Anggota Kelompok</p>
+<p align="center">1. Riyanto | STI202202753</p>
+<p align="center">2. Ikhwan Aji Ginanjar | STI202203295</p>
+<p align="center">3. Azwi Ananta Aditiya | STI202202970</p>
+<p align="center">4. Riski Junianto | STI202202976</p>
+<p align="center">5. Nurdani Dwi Romadon | STI202203300</p>
+<p align="center">6. Dafa Ahmad Sajangah | STI202202731</p>
