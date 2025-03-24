@@ -45,6 +45,11 @@
                     <i class="fa-solid fa-house"></i>
                     <span>Dashboard</span></a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url('/barang') }}">
+                    <i class="fa-solid fa-folder"></i>
+                    <span>Barang</span></a>
+            </li>
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
@@ -101,7 +106,11 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Nama User</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">
+                                    @if(Auth::check())
+                                    <b>{{ Auth::user()->name }}</b>
+                                    @endif
+                                </span>
                                 <img class="img-profile rounded-circle" src="{{ asset('img/user.png') }}">
                             </a>
                             <!-- Dropdown - User Information -->
@@ -126,8 +135,11 @@
                     <h1 class="h3 mb-4 text-gray-800">Dashboard Page</h1>
 
                 </div>
-                <!-- /.container-fluid -->
-
+                <div class="container-fluid">
+                    @if(Auth::check())
+                    <b>Halo {{ Auth::user()->name }}, Anda Berhasil Login </b>
+                    @endif
+                </div>
             </div>
             <!-- End of Main Content -->
 
