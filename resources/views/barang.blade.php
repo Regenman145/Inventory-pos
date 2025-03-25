@@ -1,6 +1,6 @@
 @extends('layout.layout')
 
-@section('content')
+@section('konten')
 
 <!-- Begin Page Content -->
 <div class="container-fluid">

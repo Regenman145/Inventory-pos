@@ -31,7 +31,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ url('/dahsboard') }}">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ url('/dashboard') }}">
                 <i class="fa-regular fa-hard-drive"></i>
                 <div class="sidebar-brand-text mx-3">Inventory API</div>
             </a>
@@ -44,11 +44,6 @@
                 <a class="nav-link" href="{{ url('/dashboard') }}">
                     <i class="fa-solid fa-house"></i>
                     <span>Dashboard</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ url('/barang') }}">
-                    <i class="fa-solid fa-folder"></i>
-                    <span>Barang</span></a>
             </li>
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -106,11 +101,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">
-                                    @if(Auth::check())
-                                    <b>{{ Auth::user()->name }}</b>
-                                    @endif
-                                </span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Nama User</span>
                                 <img class="img-profile rounded-circle" src="{{ asset('img/user.png') }}">
                             </a>
                             <!-- Dropdown - User Information -->
@@ -129,17 +120,9 @@
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
-                <div class="container-fluid">
+                @yield('konten')
+                <!-- /.container-fluid -->
 
-                    <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Dashboard Page</h1>
-
-                </div>
-                <div class="container-fluid">
-                    @if(Auth::check())
-                    <b>Halo {{ Auth::user()->name }}, Anda Berhasil Login </b>
-                    @endif
-                </div>
             </div>
             <!-- End of Main Content -->
 
@@ -182,11 +165,7 @@
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <form action="{{ route('logout') }}" method="post">
-                        @csrf
-                        <button class="btn btn-danger">Logout</button>
-                    </form>
-
+                    <a class="btn btn-primary" href="{{ url('/login') }}">Logout</a>
                 </div>
             </div>
         </div>
