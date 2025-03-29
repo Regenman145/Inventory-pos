@@ -57,8 +57,7 @@
                                                     name="password" placeholder="Password...">
                                             </div>
                                             <div class="col-sm-6">
-                                                <input type="password" class="form-control form-control-user" name="password"
-                                                    id="password" placeholder="Ulangi Password!!">
+                                                <input type="password" class="form-control form-control-user" name="password_confirmation" required placeholder="Ulangi Password!!">
                                             </div>
                                         </div>
                                         <button class="btn btn-primary btn-user btn-block">
@@ -90,6 +89,36 @@
 
     <!-- Custom scripts for all pages-->
     <script src="{{ asset('js/sb-admin-2.min.js') }}"></script>
+    <!-- sweet alert 2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function(event) {
+            let name = document.getElementById('name').value;
+            let email = document.getElementById('email').value;
+            let password = document.getElementById('password').value;
+            let password_confirmation = document.getElementById('password_confirmation').value;
+
+            if (!name || !email || !password || !password_confirmation) {
+                event.preventDefault();
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Harap isi semua kolom!',
+                });
+                return;
+            }
+
+            if (password !== password_confirmation) {
+                event.preventDefault();
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Password dan konfirmasi password harus sama!',
+                });
+            }
+        });
+    </script>
 
 </body>
 
