@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Dashboard</title>
+    <title>@yield('judul')</title>
 
     <!-- Custom fonts for this template-->
     <link href="{{ asset('vendor/fontawesome/css/all.min.css') }}" rel="stylesheet" type="text/css">
@@ -44,6 +44,11 @@
                 <a class="nav-link" href="{{ url('/dashboard') }}">
                     <i class="fa-solid fa-house"></i>
                     <span>Dashboard</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url('/barang') }}">
+                    <i class="fa-solid fa-folder"></i>
+                    <span>Barang</span></a>
             </li>
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -101,7 +106,11 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Nama User</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">
+                                    @if(Auth::check())
+                                    <b>{{ Auth::user()->name }}</b>
+                                    @endif
+                                </span>
                                 <img class="img-profile rounded-circle" src="{{ asset('img/user.png') }}">
                             </a>
                             <!-- Dropdown - User Information -->
@@ -125,21 +134,7 @@
 
             </div>
             <!-- End of Main Content -->
-
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>&copy; copyright
-                            <script>
-                                document.write(new Date().getFullYear());
-                            </script>
-                        </span>
-                    </div>
-                </div>
-            </footer>
-            <!-- End of Footer -->
-
+            @include('layout.partials.footer')
         </div>
         <!-- End of Content Wrapper -->
 
