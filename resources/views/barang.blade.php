@@ -43,8 +43,9 @@
                     </datalist>
                 </div>
                 <div class="col-3">
+                    <!-- bagian edit nanti tambah d-none -->
                     <input type="submit" class="btn btn-primary" value="Simpan" id="btn-simpan"></input>
-                    <input type="button" class="btn btn-warning d-none" value="Edit" id="btn-edit"></input>
+                    <input type="button" class="btn btn-warning" value="Edit" id="btn-edit"></input>
                     <input type="button" class="btn btn-dark" value="Reset" id="btn-reset"></input>
                 </div>
             </div>

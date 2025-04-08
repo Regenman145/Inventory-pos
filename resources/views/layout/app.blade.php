@@ -50,6 +50,16 @@
                     <i class="fa-solid fa-folder"></i>
                     <span>Barang</span></a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url('/sementara') }}">
+                    <i class="fa-regular fa-folder-closed"></i>
+                    <span>Rekap/history</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url('/sementara') }}">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Manajemen Role</span></a>
+            </li>
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 

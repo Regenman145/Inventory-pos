@@ -11,6 +11,9 @@ Route::get('/', function () {
 // Route::get('/barang', function () {
 //     return view('barang');
 // });
+Route::get('/sementara', function () {
+    return view('kosong');
+});
 Route::middleware('guest')->group(function () {
     //registrasi
     Route::get('/registrasi', [AuthController::class, 'tampilRegistrasi'])->name('registrasi.tampil');
