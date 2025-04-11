@@ -57,7 +57,7 @@
         <div class="card-body">
             <table class="table" id="tabel-mobil">
                 <thead class="table-success">
-                    <th>####</th>
+                    <th>kode barang</th>
                     <th>####</th>
                     <th>####</th>
                     <th>####</th>
